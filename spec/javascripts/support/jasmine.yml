@@ -1,0 +1,36 @@
+src_files:
+  - vendor/**/*.{js,coffee}
+  - lib/**/*.{js,coffee}
+  - app/assets/javascripts/**/*.js
+  - app/assets/javascripts/Player.js
+  - app/assets/javascripts/Song.js
+  - app/**/*.{js,coffee}
+
+stylesheets:
+  - "vendor/**/*.css"
+  - "lib/**/*.css"
+  - "app/**/*.css"
+
+helpers:
+  - "helpers/**/*.{js,coffee}"
+
+spec_files:
+  - "**/*[Ss]pec.{js,coffee}"
+
+src_dir:
+
+spec_dir: spec/javascripts
+# src_dir: public
+#
+src_dir:
+
+# spec_dir
+#
+# Spec directory path. Your spec_files must be returned relative to this path.
+# Default: spec/javascripts
+#
+# EXAMPLE:
+#
+# spec_dir: spec/javascripts
+#
+spec_dir: spec/javascripts

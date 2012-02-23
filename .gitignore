@@ -1,0 +1,8 @@
+.rvmrc
+.DS_Store
+*.swp
+log/*
+*.sqlite3
+tmp/*
+.jhw-cache/*
+
