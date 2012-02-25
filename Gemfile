@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'octokit'
 gem 'heroku'
 
 group :development, :test do
