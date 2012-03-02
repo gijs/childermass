@@ -1,8 +1,12 @@
-.dashboard {
-  margin-top: 1em;
-  text-align:center;
+.container {
+  margin-top: 2em;
+}
+
+#events {
+  height: 30em;
 }
 
 #footer {
+  text-align:center;
   font-size: .8em;
 }
