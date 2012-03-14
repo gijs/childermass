@@ -6,7 +6,7 @@ src_files:
   - spec/javascripts/support/sinon-1.2.0.js
   - spec/javascripts/support/jasmine-sinon.js
   - app/assets/javascripts/namespace.js
-  - app/assets/javascripts/*.{js,coffee}
+  - app/assets/javascripts/**/*.js
 
 helpers:
   - "helpers/**/*.{js,coffee}"

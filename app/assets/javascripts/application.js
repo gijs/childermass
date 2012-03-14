@@ -14,4 +14,5 @@
 //= require jquery
 //= require underscore
 //= require backbone
+//= require models/GithubUser
 //= require_tree .
