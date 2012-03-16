@@ -3,8 +3,9 @@ namespace("Childermass.Views", {
     template: 'current_user',
 
     render: function() {
-      console.log(this.mustachify());
       this.$el.html(this.mustachify(this.template, this.model.attributes));
+
+      return this;
     }
   })
 });
