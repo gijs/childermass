@@ -17,5 +17,6 @@
 //= require mustache
 //= require models/GithubUser
 //= require views/Mustachioed
+//= require views/SimpleMustache
 //= require views/CurrentUser
 //= require_tree .

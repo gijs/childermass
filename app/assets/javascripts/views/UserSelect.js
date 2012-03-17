@@ -1,14 +1,13 @@
 namespace("Childermass.Views", {
-  UserSelect: Backbone.View.extend({
+  UserSelect: Childermass.Views.SimpleMustache.extend({
     template: 'user_select',
+
+    presenterData: function() {
+      return this.model.attributes;
+    },
 
     events: {
       'keyup #user_input' : 'queryGithubOnEnter'
-    },
-
-    render: function() {
-     this.$el.html(this.mustachify(this.template, this.model.attributes));
-     return this;
     },
 
     queryGithubOnEnter: function (event) {
@@ -29,6 +28,4 @@ namespace("Childermass.Views", {
     }
   })
 });
-
-_.extend(Childermass.Views.UserSelect.prototype, Childermass.Views.Mustachioed);
 
