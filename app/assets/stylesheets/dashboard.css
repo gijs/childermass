@@ -6,6 +6,11 @@
   margin-top: 1em;
 }
 
+.select{
+  margin-left: 4em;
+  margin-right: auto;
+}
+
 #events {
   height: 30em;
 }

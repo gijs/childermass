@@ -2,9 +2,9 @@
   $(document).ready(function() {
     App = {};
     App.user = new Childermass.Models.GithubUser({login: "mjansen401"});
-    App.view = new Childermass.Views.CurrentUser({el: '#username', model: App.user});
-    App.user.fetch({success: App.view.render});
-    App.view.render();
+    App.currentUserView = new Childermass.Views.CurrentUser({el: '#current_user', model: App.user});
+    App.userSelectView = new Childermass.Views.UserSelect({el: '#user_select', model: App.user});
+    App.userSelectView.render();
   });
 </script>
 
