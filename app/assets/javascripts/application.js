@@ -14,5 +14,8 @@
 //= require jquery
 //= require underscore
 //= require backbone
+//= require mustache
 //= require models/GithubUser
+//= require views/Mustachioed
+//= require views/CurrentUser
 //= require_tree .

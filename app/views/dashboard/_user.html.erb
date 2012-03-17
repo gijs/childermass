@@ -1,6 +1,29 @@
-<script type="text/x-mustache-template" name="user">
-  <label>Github Username</label>
-  <input type="text" />
-  <button type="submit" class="btn">Submit</button>
+<script type="text/x-mustache-template" name="current_user">
+  <div class="row">
+    <div class="span1 gravatar">
+      <img src='http://gravatar.com/avatar/{{gravatar_id}}' class="gravatar"/>
+    </div>
+    <div class="span3">
+      <h2><a href={{html_url}}>{{login}}</a></h2>
+      <table class="table">
+        <tr>
+          <td>
+            Followers
+          </td>
+          <td>
+            {{followers}}
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Following
+          </td>
+          <td>
+            {{following}}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </script>
 

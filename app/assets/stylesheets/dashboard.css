@@ -2,6 +2,10 @@
   margin-top: 2em;
 }
 
+.gravatar {
+  margin-top: 1em;
+}
+
 #events {
   height: 30em;
 }

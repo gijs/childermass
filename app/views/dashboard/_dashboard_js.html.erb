@@ -1,0 +1,10 @@
+<script type="text/javascript">
+  $(document).ready(function() {
+    App = {};
+    App.user = new Childermass.Models.GithubUser({login: "mjansen401"});
+    App.view = new Childermass.Views.CurrentUser({el: '#username', model: App.user});
+    App.user.fetch({success: App.view.render});
+    App.view.render();
+  });
+</script>
+
