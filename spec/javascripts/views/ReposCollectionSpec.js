@@ -62,6 +62,16 @@ describe("Childermass.Views.ReposCollection", function() {
       expect($('#repos_table').children().length).toEqual(2);
     });
 
+    it("clears the collection el before rendering", function() {
+      var model1 = new Backbone.Model({id: 1});
+      var model2 = new Backbone.Model({id: 2});
+      this.view.collection = new Backbone.Collection([model1, model2]);
+      this.view.render();
+      this.view.render();
+
+      expect($('#repos_table').children().length).toEqual(2);
+    });
+
     it("returns view", function() {
       expect(this.view.render()).toBe(this.view);
     });

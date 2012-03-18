@@ -30,3 +30,8 @@
 #repos.stats {
   margin-top: .3em;
 }
+
+#current_user.stat {
+  text-align:right;
+}
+

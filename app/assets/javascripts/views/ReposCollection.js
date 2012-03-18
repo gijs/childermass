@@ -5,6 +5,7 @@ namespace("Childermass.Views", {
     },
 
     render: function() {
+      this.$el.html('');
       this.collection.each(this.addRepo, this)
       return this;
     },
