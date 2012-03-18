@@ -54,4 +54,15 @@ describe("Childermass.Collections.GithubRepos", function() {
     });
   });
 
+  describe("comparator", function() {
+    it("returns negative of updated_at as a JS Date", function() {
+      var model = new Backbone.Model({updated_at: "2012-03-18T16:27:22Z"});
+
+      var date = this.collection.comparator(model);
+      var expectedDate = new Date("2012-03-18T16:27:22Z");
+
+      expect(date).toEqual(-expectedDate);
+    });
+  });
+
 });
