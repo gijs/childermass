@@ -8,7 +8,8 @@ src_files:
   - spec/javascripts/support/jasmine-sinon.js
   - app/assets/javascripts/namespace.js
   - app/assets/javascripts/views/Mustachioed.js
-  - app/assets/javascripts/views/SimpleMustache.js
+  - app/assets/javascripts/views/SimpleMustacheView.js
+  - app/assets/javascripts/views/SimpleMustacheCollectionView.js
   - app/assets/javascripts/models/**/*.js
   - app/assets/javascripts/collections/**/*.js
   - app/assets/javascripts/views/RepoOverview.js

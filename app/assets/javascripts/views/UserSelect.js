@@ -1,5 +1,5 @@
 namespace("Childermass.Views", {
-  UserSelect: Childermass.Views.SimpleMustache.extend({
+  UserSelect: Childermass.Views.SimpleMustacheView.extend({
     template: 'user_select',
 
     presenterData: function() {

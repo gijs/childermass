@@ -1,5 +1,5 @@
 namespace("Childermass.Views", {
-  RepoOverview: Childermass.Views.SimpleMustache.extend({
+  RepoOverview: Childermass.Views.SimpleMustacheView.extend({
     template: 'repo_overview',
     tagName: 'tr',
 

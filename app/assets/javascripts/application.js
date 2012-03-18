@@ -19,6 +19,7 @@
 //= require models/GithubRepo
 //= require collections/GithubRepos
 //= require views/Mustachioed
-//= require views/SimpleMustache
+//= require views/SimpleMustacheView
+//= require views/SimpleMustacheCollectionView
 //= require views/CurrentUser
 //= require_tree .
