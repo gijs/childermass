@@ -13,6 +13,13 @@ Childermass is largely an experiment with Backbone.js, sitting on top of Rails. 
 
 * Ruby 1.9.3-p125
 * Rails 3.2.1
-* Backbone 0.9.3
+* Backbone.js 0.9.3
+* Mustache.js
+
+###Tested with:
+
+* Rspec
+* Jasmine
+* Sinon.js
 
 Childermass is also a character in the excellent and highly recommended book Jonathan Strange and Mr Norrell by Susanna Clarke.

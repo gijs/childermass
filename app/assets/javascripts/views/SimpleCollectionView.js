@@ -1,5 +1,5 @@
 namespace("Childermass.Views", {
-  SimpleMustacheCollectionView: Backbone.View.extend({
+  SimpleCollectionView: Backbone.View.extend({
     render: function() {
       this.$el.html('');
       this.collection.each(this.addRepo, this)

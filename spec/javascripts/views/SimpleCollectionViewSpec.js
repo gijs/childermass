@@ -3,7 +3,7 @@
       setFixtures('<table id="repos_table"></table>')
 
       this.collection = new Backbone.Collection();
-      this.view = new Childermass.Views.SimpleMustacheCollectionView({el: '#repos_table', collection: this.collection});
+      this.view = new Childermass.Views.SimpleCollectionView({el: '#repos_table', collection: this.collection});
 
       this.modelView = new Backbone.View();
       this.modelView.render = function() {

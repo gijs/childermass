@@ -20,6 +20,6 @@
 //= require collections/GithubRepos
 //= require views/Mustachioed
 //= require views/SimpleMustacheView
-//= require views/SimpleMustacheCollectionView
+//= require views/SimpleCollectionView
 //= require views/CurrentUser
 //= require_tree .
