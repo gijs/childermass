@@ -1,9 +1,9 @@
-Childermass
+#Childermass
 ===========
 
-"Childermass knew what old people by firesides are thinking of, though no one has asked them in years. Childermass knew what young men hear in the rattling of the drums and the tooting of the pipes that makes them leave their homes and go to be soldiers – and he knew the half-eggcupful of glory and the barrelful of misery that await them."
+> Childermass knew what old people by firesides are thinking of, though no one has asked them in years. Childermass knew what young men hear in the rattling of the drums and the tooting of the pipes that makes them leave their homes and go to be soldiers – and he knew the half-eggcupful of glory and the barrelful of misery that await them.
 
--Susanna Clarke, Jonathan Strange and Mr Norrell
+    Susanna Clarke, Jonathan Strange and Mr Norrell
 
 ==========
 
@@ -13,9 +13,9 @@ Childermass is largely an experiment with Backbone.js, sitting on top of Rails. 
 
 Developed on:
 
-Ruby 1.9.3-p125
-Rails 3.2.1
-Backbone 0.9.3
+* Ruby 1.9.3-p125
+* Rails 3.2.1
+* Backbone 0.9.3
 
 
 ==========
