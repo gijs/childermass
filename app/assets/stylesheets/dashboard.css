@@ -19,3 +19,10 @@
   text-align:center;
   font-size: .8em;
 }
+
+#repos {
+  line-height: .2em;
+}
+#repos.stats {
+  margin-top: .3em;
+}

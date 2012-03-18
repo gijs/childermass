@@ -1,7 +1,10 @@
 <script type="text/x-mustache-template" name="repo_overview">
   <td>
-    <h4>{{name}} <span class="label"> {{language}} </span></h4>
+    <h4>{{name}} [{{language}}]</h4>
     {{description}}
+    <div class="stats">
+      <span class="badge"> Forks - {{forks}}</span> <span class="badge badge-success">Watchers - {{watchers}}</span>
+    </div>
   </td>
   <td>
   </td>
