@@ -3,7 +3,11 @@
 }
 
 .gravatar {
-  margin-top: 1em;
+  float: left;
+}
+
+.username {
+  margin-left: 1.3em;
 }
 
 .select{

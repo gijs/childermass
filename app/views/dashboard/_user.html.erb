@@ -1,25 +1,36 @@
 <script type="text/x-mustache-template" name="current_user">
   <div class="row">
-    <div class="span1 gravatar">
-      <img src='http://gravatar.com/avatar/{{gravatar_id}}' class="gravatar"/>
-    </div>
-    <div class="span3">
-      <h2><a href={{html_url}}>{{login}}</a></h2>
+    <div class="span4">
+      <img src='http://gravatar.com/avatar/{{gravatar_id}}?s=32' class="gravatar"/>
+      <h1 class="username"><a href={{html_url}}>{{login}}</a></h1>
       <table class="table">
         <tr>
+          <td>
+            Public Repos
+          </td>
+          <td>
+            <span class="badge badge-success">{{public_repos}}</span>
+          </td>
           <td>
             Followers
           </td>
           <td>
-            {{followers}}
+            <span class="badge badge-success">{{followers}}</span>
           </td>
         </tr>
+
         <tr>
+          <td>
+            Public Gists
+          </td>
+          <td>
+            <span class="badge badge-success">{{public_gists}}</span>
+          </td>
           <td>
             Following
           </td>
           <td>
-            {{following}}
+            <span class="badge badge-success">{{following}}</span>
           </td>
         </tr>
       </table>
