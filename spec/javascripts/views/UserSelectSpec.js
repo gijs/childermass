@@ -1,12 +1,16 @@
 describe("Childermass.Views.UserSelect", function() {
   beforeEach(function() {
     this.model = new Backbone.Model();
+    this.collection = new Backbone.Collection();
+    this.collection.setUser = function() {};
+    this.setUserStub = sinon.stub(this.collection, "setUser");
     this.bindStub = sinon.stub(this.model, "bind");
-    this.view = new Childermass.Views.UserSelect({el: '#test', model: this.model});
+    this.view = new Childermass.Views.UserSelect({el: '#test', model: this.model, collection: this.collection});
   });
 
   afterEach(function() {
     this.bindStub.restore();
+    this.setUserStub.restore();
   });
 
   it("template is 'user_select'", function() {
@@ -52,9 +56,15 @@ describe("Childermass.Views.UserSelect", function() {
       expect(this.fetchStub).toHaveBeenCalled();
     });
 
+    it("calls setUser on the collection", function() {
+      this.view.queryGithubOnEnter(this.mockEvent);
+
+      expect(this.setUserStub).toHaveBeenCalled();
+    });
+
     it("clears the input value in the el", function () {
       setFixtures('<div id="test"><input id="user_input" value="foo" /></div>')
-      var view = new Childermass.Views.UserSelect({el: '#test', model: this.model});
+      var view = new Childermass.Views.UserSelect({el: '#test', model: this.model, collection: this.collection});
 
       view.queryGithubOnEnter(this.mockEvent);
 

@@ -15,6 +15,7 @@ namespace("Childermass.Views", {
         var inputValue = $(event.currentTarget).attr('value');
         this.model.set({login: inputValue}, {silent: true});
         this.model.fetch();
+        this.collection.setUser(inputValue);
         this.clearInput();
       }
     },

@@ -9,6 +9,10 @@ src_files:
   - app/assets/javascripts/namespace.js
   - app/assets/javascripts/views/Mustachioed.js
   - app/assets/javascripts/views/SimpleMustache.js
+  - app/assets/javascripts/models/**/*.js
+  - app/assets/javascripts/collections/**/*.js
+  - app/assets/javascripts/views/RepoOverview.js
+  - app/assets/javascripts/views/**/*.js
   - app/assets/javascripts/**/*.js
 
 helpers:

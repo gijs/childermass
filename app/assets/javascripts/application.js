@@ -16,6 +16,8 @@
 //= require backbone
 //= require mustache
 //= require models/GithubUser
+//= require models/GithubRepo
+//= require collections/GithubRepos
 //= require views/Mustachioed
 //= require views/SimpleMustache
 //= require views/CurrentUser
