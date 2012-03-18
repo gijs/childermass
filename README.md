@@ -15,4 +15,4 @@ Childermass is largely an experiment with Backbone.js, sitting on top of Rails. 
 * Rails 3.2.1
 * Backbone 0.9.3
 
-*Childermass is named after a character in the excellent and highly recommended book Jonathan Strange and Mr Norrell by Susanna Clarke.*
+Childermass is also a character in the excellent and highly recommended book Jonathan Strange and Mr Norrell by Susanna Clarke.
