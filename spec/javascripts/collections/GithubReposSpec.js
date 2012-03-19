@@ -12,7 +12,7 @@ describe("Childermass.Collections.GithubRepos", function() {
     expect(this.collection.model).toBe(Childermass.Models.GithubRepo);
   });
 
-  it("url is /github/users/mike/repos", function() {
+  it("url is /github/repos/mike", function() {
     this.collection.user = "mike"
     expect(this.collection.url()).toBe('/github/repos/mike');
   });

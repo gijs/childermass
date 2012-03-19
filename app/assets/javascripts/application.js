@@ -18,6 +18,7 @@
 //= require models/GithubUser
 //= require models/GithubRepo
 //= require collections/GithubRepos
+//= require collections/CurrentUserBasedCollection
 //= require views/Mustachioed
 //= require views/SimpleMustacheView
 //= require views/SimpleCollectionView

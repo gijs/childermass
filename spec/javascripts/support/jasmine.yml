@@ -11,6 +11,7 @@ src_files:
   - app/assets/javascripts/views/SimpleMustacheView.js
   - app/assets/javascripts/views/SimpleCollectionView.js
   - app/assets/javascripts/models/**/*.js
+  - app/assets/javascripts/collections/CurrentUserBasedCollection.js
   - app/assets/javascripts/collections/**/*.js
   - app/assets/javascripts/views/RepoOverview.js
   - app/assets/javascripts/views/**/*.js
