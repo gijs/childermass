@@ -22,4 +22,4 @@ Childermass is largely an experiment with Backbone.js, sitting on top of Rails. 
 * Jasmine
 * Sinon.js
 
-Childermass is also a character in the excellent and highly recommended book Jonathan Strange and Mr Norrell by Susanna Clarke.
+Childermass is also a character in the excellent and highly recommended book *Jonathan Strange and Mr Norrell* by Susanna Clarke.
