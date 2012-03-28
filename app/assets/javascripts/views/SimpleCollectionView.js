@@ -2,11 +2,11 @@ namespace("Childermass.Views", {
   SimpleCollectionView: Backbone.View.extend({
     render: function() {
       this.$el.html('');
-      this.collection.each(this.add, this)
+      this.collection.each(this.appendModelView, this)
       return this;
     },
 
-    add: function(model) {
+    appendModelView: function(model) {
       var el = this.newModelView(model).render().el;
       this.$el.append(el);
     },
