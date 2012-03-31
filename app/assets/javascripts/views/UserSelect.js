@@ -1,10 +1,10 @@
 namespace("Childermass.Views", {
   UserSelect: Childermass.Views.SimpleMustacheView.extend({
-    template: 'user_select',
-
-    presenterData: function() {
-      return this.model.attributes;
+    initialize: function(options) {
+      this.router = options.router;
     },
+
+    template: 'user_select',
 
     events: {
       'keyup #user_input' : 'queryGithubOnEnter'
@@ -13,9 +13,7 @@ namespace("Childermass.Views", {
     queryGithubOnEnter: function (event) {
       if (this.enterKeyPressed(event.keyCode)) {
         var inputValue = $(event.currentTarget).attr('value');
-        this.model.set({login: inputValue}, {silent: true});
-        this.model.fetch();
-        this.collection.setUser(inputValue);
+        this.router.navigate(inputValue, {trigger: true});
         this.clearInput();
       }
     },

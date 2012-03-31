@@ -1,24 +1,16 @@
 describe("Childermass.Views.UserSelect", function() {
   beforeEach(function() {
-    this.model = new Backbone.Model();
-    this.collection = new Backbone.Collection();
-    this.collection.setUser = function() {};
-    this.setUserStub = sinon.stub(this.collection, "setUser");
-    this.bindStub = sinon.stub(this.model, "bind");
-    this.view = new Childermass.Views.UserSelect({el: '#test', model: this.model, collection: this.collection});
+    this.router = new Backbone.Router();
+    this.navigateStub = sinon.stub(this.router, "navigate");
+    this.view = new Childermass.Views.UserSelect({el: '#test', router: this.router});
   });
 
   afterEach(function() {
-    this.bindStub.restore();
-    this.setUserStub.restore();
+    this.navigateStub.restore();
   });
 
   it("template is 'user_select'", function() {
     expect(this.view.template).toBe("user_select");
-  });
-
-  it("presenterData returns model's attributes", function() {
-    expect(this.view.presenterData()).toBe(this.model.attributes);
   });
 
   describe("events", function () {
@@ -36,35 +28,17 @@ describe("Childermass.Views.UserSelect", function() {
         keyCode : 13,
         currentTarget: this.input
       }
-
-      this.fetchStub = sinon.stub(this.model, "fetch");
     });
 
-    afterEach(function() {
-      this.fetchStub.restore();
-    });
-
-    it("sets the login value silently on the model", function () {
+    it("navigates to the input value", function() {
       this.view.queryGithubOnEnter(this.mockEvent);
 
-      expect(this.view.model.get('login')).toBe("foo");
-    });
-
-    it("fetches the model", function () {
-      this.view.queryGithubOnEnter(this.mockEvent);
-
-      expect(this.fetchStub).toHaveBeenCalled();
-    });
-
-    it("calls setUser on the collection", function() {
-      this.view.queryGithubOnEnter(this.mockEvent);
-
-      expect(this.setUserStub).toHaveBeenCalled();
+      expect(this.navigateStub).toHaveBeenCalledWith("foo");
     });
 
     it("clears the input value in the el", function () {
       setFixtures('<div id="test"><input id="user_input" value="foo" /></div>')
-      var view = new Childermass.Views.UserSelect({el: '#test', model: this.model, collection: this.collection});
+      var view = new Childermass.Views.UserSelect({el: '#test', router: this.router});
 
       view.queryGithubOnEnter(this.mockEvent);
 
@@ -75,7 +49,7 @@ describe("Childermass.Views.UserSelect", function() {
       var mockEvent = {keyCode : 14};
 
       this.view.queryGithubOnEnter(mockEvent);
-      expect(this.fetchStub).not.toHaveBeenCalled();
+      expect(this.navigateStub).not.toHaveBeenCalled();
     });
   });
 

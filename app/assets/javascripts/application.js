@@ -23,4 +23,5 @@
 //= require views/SimpleMustacheView
 //= require views/SimpleCollectionView
 //= require views/CurrentUser
+//= require routers/DashboardRouter
 //= require_tree .
