@@ -24,6 +24,8 @@ gem 'octokit'
 gem 'heroku'
 
 group :development, :test do
+  gem 'guard'
+  gem 'guard-rspec'
   gem 'sqlite3'
   gem 'rspec-rails'
   gem 'jasmine'
