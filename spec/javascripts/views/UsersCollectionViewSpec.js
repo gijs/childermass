@@ -9,9 +9,6 @@ describe("Childermass.Views.UsersCollectionView", function() {
     this.bindStub.restore();
   });
 
-  it("binds the render to the collection change", function() {
-    expect(this.bindStub).toHaveBeenCalledWith("change", this.view.render, this.view);
-  });
   it("newModelView returns an instance of Childermass.Views.UserOverview", function() {
     var modelView = new Backbone.View();
     var model = new Backbone.Model({id: 1});
