@@ -5,7 +5,7 @@ describe("Childermass.Routers.DashboardRouter", function() {
     this.collection.setUser = function() {};
     this.router = new Childermass.Routers.DashboardRouter({
       currentUser: this.model,
-      repos: this.collection
+      repos: this.collection,
     });
   });
 
@@ -13,6 +13,10 @@ describe("Childermass.Routers.DashboardRouter", function() {
     it("routes ':user' to 'loadCurrentUser'", function() {
       expect(this.router.routes[':user']).toBe('loadCurrentUser');
     });
+
+    it("routes ':user/following' to 'loadUsersFollowing'", function() {
+      expect(this.router.routes[':user/following']).toBe('loadUsersFollowing');
+    })
   });
 
   describe("initialize", function() {
@@ -22,8 +26,8 @@ describe("Childermass.Routers.DashboardRouter", function() {
 
     it("sets repos", function() {
       expect(this.router.repos).toBe(this.collection);
-    })
-  });
+    });
+   });
 
   describe("loadCurrentUser", function() {
     beforeEach(function() {
@@ -56,4 +60,6 @@ describe("Childermass.Routers.DashboardRouter", function() {
       expect(this.setUserStub).toHaveBeenCalledWith('gitbub');
     });
   });
+
+
 });

@@ -3,11 +3,13 @@
     Dashboard = {};
     Dashboard.user = new Childermass.Models.GithubUser();
     Dashboard.repos = new Childermass.Collections.GithubRepos();
-    Dashboard.router = new Childermass.Routers.DashboardRouter({currentUser: Dashboard.user, repos: Dashboard.repos});
+    Dashboard.following = new Childermass.Collections.FollowingUsers([], {currentUser: Dashboard.user});
+    Dashboard.router = new Childermass.Routers.DashboardRouter({currentUser: Dashboard.user, repos: Dashboard.repos, following: Dashboard.following});
 
-    Dashboard.currentUserView = new Childermass.Views.CurrentUser({el: '#current_user', model: Dashboard.user});
+    Dashboard.currentUserView = new Childermass.Views.CurrentUser({el: '#current_user', model: Dashboard.user, router: Dashboard.router});
     Dashboard.userSelectView = new Childermass.Views.UserSelect({el: '#user_select', router: Dashboard.router});
-    Dashboard.reposView = new Childermass.Views.ReposCollection({el: '#repos_table', collection: Dashboard.repos});
+    Dashboard.reposView = new Childermass.Views.ReposCollection({el: '#expanded_info_table', collection: Dashboard.repos});
+    Dashboard.followingUsersView = new Childermass.Views.UsersCollectionView({el: '#expanded_info_table', collection: Dashboard.following});
     Dashboard.userSelectView.render()
 
     Backbone.history.start({root: '', pushState: true});
