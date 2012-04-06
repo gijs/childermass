@@ -4,7 +4,7 @@
       <img src='http://gravatar.com/avatar/{{gravatar_id}}?s=32' class="gravatar"/>
       <h1 class="username"><a href={{html_url}}>{{login}}</a></h1>
       <table class="table">
-        <tr>
+        <tr id="repos">
           <td>
             <h6>Public Repos</h6>
           </td>
@@ -20,7 +20,7 @@
             <h6><span class="badge badge-success">{{public_gists}}</span></h6>
           </td>
         </tr>
-        <tr>
+        <tr id="following">
           <td>
             <h6>Following</h6>
           </td>
@@ -28,7 +28,7 @@
             <h6><span class="badge badge-success">{{following}}</span></h6>
           </td>
         </tr>
-        <tr>
+        <tr id="followers">
           <td>
             <h6>Followers</h6>
           </td>
