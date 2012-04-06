@@ -24,10 +24,10 @@
   font-size: .8em;
 }
 
-#repos {
+#expanded_info {
   line-height: .2em;
 }
-#repos.stats {
+#expanded_info.stats {
   margin-top: .3em;
 }
 
